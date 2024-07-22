@@ -70,7 +70,7 @@ const MainCard = ({ urlAPI }) => {
             >
                 {information.map(info => (
                     <div
-                        className="relative min-w-full max-h-96 flex justify-center "
+                        className="relative min-w-full h-main__card flex justify-center "
                         key={info.id}
                     >
                         <img
@@ -95,13 +95,13 @@ const MainCard = ({ urlAPI }) => {
                         <div className="flex items-center">
                             <img
                                 src='./assets/icons/previous.png'
-                                className="h-10 absolute left-2"
+                                className="h-10 absolute left-2 bg-gray-900 rounded-full p-2 opacity-50 hover:opacity-80 hover:cursor-pointer"
                                 alt="image"
                                 onClick={() => ChangeImage(-1)}
                             />
                             <img
                                 src='./assets/icons/next.png'
-                                className="h-10 absolute right-2"
+                                className="h-10 absolute right-2 bg-gray-900 rounded-full p-2 opacity-50 hover:opacity-80 hover:cursor-pointer"
                                 alt="image"
                                 onClick={() => ChangeImage(1)}
                             />

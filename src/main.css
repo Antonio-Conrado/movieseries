@@ -5,3 +5,14 @@
     display: none;
     
 }
+
+.h-main__card{
+    height: fit-content;
+}
+
+@media(min-width:1024px){
+    .h-main__card{
+        height: 580px;
+    }
+    
+}
