@@ -1,8 +1,9 @@
 
+import Card from "../components/Card";
 import MainCard from "../components/MainCard";
 
 //links
-import { moviePopular } from "../Links/Links";
+import { moviePopular,seriesPopular,topRated } from "../Links/Links";
 
 const Index = () => {
     return ( 
@@ -10,6 +11,17 @@ const Index = () => {
             <MainCard 
                 urlAPI= {moviePopular}
             />
+            <section className="container mx-auto my-10">
+                <Card 
+                    urlAPI= {topRated}
+                    title='Películas más valoradas'
+                />
+                <Card 
+                    urlAPI= {seriesPopular}
+                    title='Series Populares'
+                />
+            </section>
+            
         </>
     );
 }
