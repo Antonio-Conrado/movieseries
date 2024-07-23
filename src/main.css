@@ -20,3 +20,25 @@
 .bg-body{
     background-color: #131313;
 }
+
+
+.section-with-divider {
+    position: relative;
+}
+@media (min-width:768px) {
+    .section-with-divider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .section-with-divider::before {
+        content: '';
+        position: absolute;
+        top: 10%;
+        bottom: 5%;
+        left: 50%;
+        width: 1px;
+        background-color: #ccc;
+        z-index: 0;
+        
+    }
+}

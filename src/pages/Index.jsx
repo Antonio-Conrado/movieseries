@@ -1,9 +1,16 @@
 
 import Card from "../components/Card";
+import ListCard from "../components/ListCard";
 import MainCard from "../components/MainCard";
 
 //links
-import { moviePopular,seriesPopular,topRated } from "../Links/Links";
+import { 
+    moviePopular,
+    seriesPopular,
+    topRated,
+    personPopular,
+    topPeliculas
+} from "../Links/Links";
 
 const Index = () => {
     return ( 
@@ -22,6 +29,20 @@ const Index = () => {
                 />
             </section>
             
+            <section className=" my-10 container mx-auto section-with-divider">
+                <div className="relative z-10">
+                    <ListCard
+                        urlAPI={topPeliculas}
+                        title="Top Películas "
+                    />
+                </div>
+                <div className="relative z-10">
+                    <ListCard
+                        urlAPI={personPopular}
+                        title="Top Actores"
+                    />
+                </div>
+            </section>
         </>
     );
 }
