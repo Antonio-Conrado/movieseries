@@ -13,7 +13,6 @@ const Card = ({ urlAPI, title }) => {
         const getInformation = async () => {
             const { data } = await axiosClient(`${urlAPI}`, configHeaders);
             setInformation(data.results);
-            console.log(data)
         };
         getInformation();
     }, [urlAPI]);
