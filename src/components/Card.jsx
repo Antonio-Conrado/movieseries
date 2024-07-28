@@ -43,16 +43,32 @@ const Card = ({ urlAPI, title }) => {
                                         to={`/information/${info.id}`}
                                         className="font-bold text-sm font-serif hover:cursor-pointer hover:text-gray-50"
                                     >
+                                        {info.backdrop_path ?
+                                            <img
+                                                src={`https://image.tmdb.org/t/p/w500/${info.backdrop_path}`}
+                                                className="w-full h-52 object-center rounded-tl-2xl rounded-tr-2xl"
+                                                alt="image"
+                                            />
+                                        :
+                                        info.poster_path ?
                                         <img
-                                            src={`https://image.tmdb.org/t/p/w500/${info.poster_path}`}
-                                            className="w-full h-52 object-center rounded-tl-2xl rounded-tr-2xl"
-                                            alt="image"
-                                        />
+                                        src={`https://image.tmdb.org/t/p/w500/${info.poster_path}`}
+                                        className="w-full h-52 object-center rounded-tl-2xl rounded-tr-2xl"
+                                        alt="image"
+                                    />
+                                        :
+                                            <img
+                                                src={'/assets/img/header.avif'}
+                                                className="w-full h-52 object-center rounded-tl-2xl rounded-tr-2xl"
+                                                alt="image"
+                                            />
+                                        }
+                                        
                                     </Link>
                                     {/* value */}
                                     <div className="flex items-center justify-around absolute w-6 h-5 top-3 right-2">
                                         <p className="text-white opacity-90">{voteFormat(info.vote_average).slice(-0,1)}</p>
-                                        <img src="./assets/icons/star.png" alt="" />
+                                        <img src="/assets/icons/star.png" alt="" />
                                     </div>
                                 </div>
                                 <div className="flex flex-col justify-center text-center w-40 h-20 text-gray-300 bg-slate-800 rounded-b-2xl">
@@ -62,7 +78,10 @@ const Card = ({ urlAPI, title }) => {
                                     >
                                         {info.title ? info.title : info.name}
                                     </Link>
-                                    <p>{info.release_date ? info.release_date.slice(0, -6) : info.first_air_date.slice(0, -6)}</p>
+                                    <p>{info.release_date ? info.release_date.slice(0, -6) 
+                                        : info.first_air_date ? info.first_air_date.slice(0, -6) 
+                                        : ''}
+                                    </p>
                                 </div>
                             </div>
                         ))}
@@ -71,7 +90,7 @@ const Card = ({ urlAPI, title }) => {
                 {/* previous - next */}
                 <div className="absolute inset-y-0 left-4 flex items-center">
                     <img
-                        src='./assets/icons/previous.png'
+                        src='/assets/icons/previous.png'
                         className="h-8 bg-gray-900 rounded-full p-2 opacity-70 hover:opacity-90 hover:cursor-pointer"
                         alt="previous"
                         onClick={() => ChangeImage('prev')}
@@ -79,7 +98,7 @@ const Card = ({ urlAPI, title }) => {
                 </div>
                 <div className="absolute inset-y-0 right-4 flex items-center">
                     <img
-                        src='./assets/icons/next.png'
+                        src='/assets/icons/next.png'
                         className="h-8 bg-gray-900 rounded-full p-2 opacity-70 hover:opacity-90 hover:cursor-pointer"
                         alt="next"
                         onClick={() => ChangeImage('next')}
