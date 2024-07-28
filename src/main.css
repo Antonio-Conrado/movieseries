@@ -42,3 +42,38 @@
         
     }
 }
+
+.h--information{
+    height: 450px;
+}
+@media(min-width:768px){
+    .h--information{
+        height: 580px;
+    }
+    
+}
+.h-information__image{
+    position: absolute;
+    bottom: -100px;
+    left: 30%;
+}
+
+.player{
+    width: fit-content;
+    height: fit-content;
+    border: 3px solid white;
+}
+
+@media (min-width:475px){
+    .player{
+        width: 480px;
+        height: 320px;
+    }
+}
+
+@media (min-width:768px){
+    .player{
+        width: 640px;
+        height: 360px;
+    }
+}
