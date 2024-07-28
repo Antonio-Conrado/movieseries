@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import axiosClient from '../config/axiosClient';
 import configHeader from '../config/configHeader';
 
+import Nav from "./Nav";
+
 const MainCard = ({ urlAPI }) => {
     const [information, setInformation] = useState([]);
     //number of image
@@ -79,6 +81,7 @@ const MainCard = ({ urlAPI }) => {
                             alt="image"
                             onLoad={handleImageLoad}
                         />
+                        <Nav />
 
                         <div className="absolute bottom-0  text-white text-center p-4">
                             <Link
