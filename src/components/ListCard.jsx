@@ -24,7 +24,7 @@ const ListCard = ({ urlAPI, title }) => {
                     <div className="flex justify-center">
                         {!info.backdrop_path ?
                             <Link
-                                to={`person/${info.id}`}
+                                to={`perfil/${info.id}`}
                                 className="hover:cursor-pointer"
                             >
                                 <img src={`https://image.tmdb.org/t/p/w185/${info.profile_path}`}
@@ -35,7 +35,7 @@ const ListCard = ({ urlAPI, title }) => {
                             
                             :
                             <Link
-                                to={`information/${info.id}`}
+                                to={`informacion/${info.id}`}
                                 className="hover:cursor-pointer"
                             >
                                 <img src={`https://image.tmdb.org/t/p/w500/${info.backdrop_path}`}
@@ -49,7 +49,7 @@ const ListCard = ({ urlAPI, title }) => {
                     </div>
                     <div className="flex items-center justify-around text-gray-300 text-center ">
                         <Link
-                            to={info.title ? `information/${info.id}` : `person/${info.id}`}
+                            to={info.title ? `informacion/${info.id}` : `perfil/${info.id}`}
                             className="hover:cursor-pointer  hover:text-gray-50">{info.title ? info.title : info.name}</Link>
                     </div>
                 </div>

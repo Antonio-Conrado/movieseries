@@ -40,7 +40,7 @@ const Card = ({ urlAPI, title }) => {
                             <div key={info.id} className="flex-shrink-0 rounded-2xl">
                                 <div className="w-40 h-52 relative">
                                     <Link
-                                        to={`/information/${info.id}`}
+                                        to={`/informacion/${info.id}`}
                                         className="font-bold text-sm font-serif hover:cursor-pointer hover:text-gray-50"
                                     >
                                         {info.backdrop_path ?
@@ -73,7 +73,7 @@ const Card = ({ urlAPI, title }) => {
                                 </div>
                                 <div className="flex flex-col justify-center text-center w-40 h-20 text-gray-300 bg-slate-800 rounded-b-2xl">
                                     <Link
-                                        to={`/information/${info.id}`}
+                                        to={`/informacion/${info.id}`}
                                         className="font-bold text-sm font-serif hover:cursor-pointer hover:text-gray-50"
                                     >
                                         {info.title ? info.title : info.name}

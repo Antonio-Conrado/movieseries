@@ -85,7 +85,7 @@ const MainCard = ({ urlAPI }) => {
 
                         <div className="absolute bottom-0  text-white text-center p-4">
                             <Link
-                                to={`/information/${info.id}`}
+                                to={`/informacion/${info.id}`}
                                 className="font-bold text-md font-serif hover:cursor-pointer "
                             >
                                 {info.title}
