@@ -28,24 +28,23 @@ const Casting = ({ urlAPI, title }) => {
             scrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
         }
     };
-    console.log(information)
     
     return (
         <>
             <h3 className="font-bold font-serif text-center text-cyan-500 my-6">{title}</h3>
             <div className="relative">
-                <div className="overflow-x-auto overflow-scroll flex min-h-44" ref={scrollRef}>
-                    <div className="flex gap-3 items-center mx-10">
+                <div className="overflow-scroll flex min-h-44 mx-10" ref={scrollRef}>
+                    <div className="flex gap-3 items-center">
                         {information.map(info => (
                             <div key={info.id} className="flex-shrink-0 rounded-2xl">
-                                <div className="w-40 h-52 relative">
+                                <div className="w-40 h-fit relative">
                                     {info.profile_path ?
                                         <img 
                                             src={`https://image.tmdb.org/t/p/w185/${info.profile_path}`}
-                                            className="w-full h-52 object-center rounded-tl-2xl rounded-tr-2xl" 
+                                            className="w-40 h-fit object-center rounded-tl-2xl rounded-tr-2xl" 
                                             alt="image" />
                                         :
-                                        <img src="/assets/img/header.avif" alt="image" />
+                                        <img src="/assets/img/header.avif" alt="image" className="h-fit"/>
                                     }
                                 </div>
                                  {/* value */}

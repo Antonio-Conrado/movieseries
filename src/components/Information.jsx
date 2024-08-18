@@ -40,11 +40,11 @@ const Information = () => {
                 {/* second image */}
                 <div className="h-information__image">
                     {information.poster_path ?
-                        <img src={`https://image.tmdb.org/t/p/w500/${information.poster_path}`} className="h-52 rounded-3xl w-full" alt="image" />
+                        <img src={`https://image.tmdb.org/t/p/w500/${information.poster_path}`} className="h-52 rounded-3xl max-w-32" alt="image" />
                         : information.backdrop_path ?
-                            <img src={`https://image.tmdb.org/t/p/w780/${information.backdrop_path}`} className="h-52 rounded-3xl w-full" alt="image" />
+                            <img src={`https://image.tmdb.org/t/p/w780/${information.backdrop_path}`} className="h-52 rounded-3xl max-w-32" alt="image" />
                             :
-                            <img src="/assets/img/header.avif" className="h-52 rounded-3xl  w-full" alt="image" />
+                            <img src="/assets/img/header.avif" className="h-52 rounded-3xl  max-w-32" alt="image" />
                     }
                 </div>
             </div>
@@ -91,7 +91,7 @@ const Information = () => {
             <div className="container mx-auto ">
                 <Card
                     title='Recomendation'
-                    urlAPI={`movie/${id}/similar?language=es-US`}
+                    urlAPI={`movie/${id}/recommendations?language=es-US`}
                 />
             </div>
 

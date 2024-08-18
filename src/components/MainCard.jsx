@@ -95,7 +95,7 @@ const MainCard = ({ urlAPI }) => {
 
                         {/*  previous- next */}
                         {imagesLoaded && (
-                        <div className="flex items-center">
+                        <div className="hidden lg:flex items-center">
                             <img
                                 src='./assets/icons/previous.png'
                                 className="h-10 absolute left-2 bg-gray-900 rounded-full p-2 opacity-50 hover:opacity-80 hover:cursor-pointer"
