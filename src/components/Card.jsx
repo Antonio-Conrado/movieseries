@@ -38,7 +38,7 @@ const Card = ({ urlAPI, title }) => {
                     <div className="flex gap-3 items-center">
                         {information.map(info => (
                             <div key={info.id} className="flex-shrink-0 rounded-2xl">
-                                <div className="w-40 h-fit relative">
+                                <div className="w-fit  relative">
                                     <Link
                                         to={`/informacion/${info.id}`}
                                         className="font-bold text-sm font-serif hover:cursor-pointer hover:text-gray-50"
@@ -46,20 +46,20 @@ const Card = ({ urlAPI, title }) => {
                                         {info.backdrop_path ?
                                             <img
                                                 src={`https://image.tmdb.org/t/p/w500/${info.backdrop_path}`}
-                                                className="w-full h-fit object-center rounded-tl-2xl rounded-tr-2xl"
+                                                className="w-fit h-44 object-center rounded-tl-2xl rounded-tr-2xl"
                                                 alt="image"
                                             />
                                         :
                                         info.poster_path ?
                                         <img
                                         src={`https://image.tmdb.org/t/p/w500/${info.poster_path}`}
-                                        className="w-full h-fit object-center rounded-tl-2xl rounded-tr-2xl"
+                                        className="w-fit h-44 object-center rounded-tl-2xl rounded-tr-2xl"
                                         alt="image"
                                     />
                                         :
                                             <img
                                                 src={'/assets/img/header.avif'}
-                                                className="w-full h-fit object-center rounded-tl-2xl rounded-tr-2xl"
+                                                className="w-fit h-44 object-center rounded-tl-2xl rounded-tr-2xl"
                                                 alt="image"
                                             />
                                         }
@@ -71,7 +71,7 @@ const Card = ({ urlAPI, title }) => {
                                         <img src="/assets/icons/star.png" alt="" />
                                     </div>
                                 </div>
-                                <div className="flex flex-col justify-center text-center w-40 h-20 text-gray-300 bg-slate-800 rounded-b-2xl">
+                                <div className="flex flex-col justify-center text-center w-full h-20 text-gray-300 bg-slate-800 rounded-b-2xl">
                                     <Link
                                         to={`/informacion/${info.id}`}
                                         className="font-bold text-sm font-serif hover:cursor-pointer hover:text-gray-50"

@@ -30,21 +30,21 @@ const Information = () => {
                 {/* main image */}
                 <div className="min-w-full">
                     {information.backdrop_path ?
-                        <img src={`https://image.tmdb.org/t/p/w1280/${information.backdrop_path}`} className="h-96 w-full" alt="image" />
+                        <img src={`https://image.tmdb.org/t/p/w1280/${information.backdrop_path}`} className="min-h-[650px] max-h-[650px] w-full" alt="image" />
                         : information.poster_path ?
-                            <img src={`https://image.tmdb.org/t/p/w780/${information.poster_path}`} className="h-96 w-full" alt="image" />
+                            <img src={`https://image.tmdb.org/t/p/w780/${information.poster_path}`} className="min-h-[650px] max-h-[650px] w-full" alt="image" />
                             :
-                            <img src="/assets/img/header.avif" className="h-96 w-full" alt="image" />
+                            <img src="/assets/img/header.avif" className="min-h-[650px] max-h-[650px] w-full" alt="image" />
                     }
                 </div>
                 {/* second image */}
                 <div className="h-information__image">
                     {information.poster_path ?
-                        <img src={`https://image.tmdb.org/t/p/w500/${information.poster_path}`} className="h-52 rounded-3xl max-w-32" alt="image" />
+                        <img src={`https://image.tmdb.org/t/p/w500/${information.poster_path}`} className="h-fit w-60 rounded-3xl " alt="image" />
                         : information.backdrop_path ?
-                            <img src={`https://image.tmdb.org/t/p/w780/${information.backdrop_path}`} className="h-52 rounded-3xl max-w-32" alt="image" />
+                            <img src={`https://image.tmdb.org/t/p/w780/${information.backdrop_path}`} className="rounded-3xl h-fit w-60" alt="image" />
                             :
-                            <img src="/assets/img/header.avif" className="h-52 rounded-3xl  max-w-32" alt="image" />
+                            <img src="/assets/img/header.avif" className="rounded-3xl  h-fit w-60" alt="image" />
                     }
                 </div>
             </div>

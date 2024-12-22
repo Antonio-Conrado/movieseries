@@ -23,23 +23,25 @@ const ListCard = ({ urlAPI, title }) => {
                 <div key={info.id} className="grid grid-cols-2 gap-3  text-gray-300 my-2 px-10 py-2">
                     <div className="flex justify-center">
                         {!info.backdrop_path ?
+                        // actors
                             <Link
                                 to={`perfil/${info.id}`}
                                 className="hover:cursor-pointer"
                             >
                                 <img src={`https://image.tmdb.org/t/p/w185/${info.profile_path}`}
-                                    className="h-20 w-24 rounded-full opacity-85 hover:opacity-100"
+                                    className="h-20 lg:h-40 w-fit rounded-full opacity-85 hover:opacity-100"
                                     alt="image"
                                 />
                             </Link>
                             
                             :
+                            // movies
                             <Link
                                 to={`informacion/${info.id}`}
                                 className="hover:cursor-pointer"
                             >
                                 <img src={`https://image.tmdb.org/t/p/w500/${info.backdrop_path}`}
-                                    className="h-20 w-40 rounded-2xl opacity-85 hover:opacity-100"
+                                    className="h-fit w-40 rounded-2xl opacity-85 hover:opacity-100"
                                     alt="image"
                                 />
                             </Link>
